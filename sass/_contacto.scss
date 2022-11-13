@@ -1,0 +1,185 @@
+@import "_commons";
+
+#carouselExampleIndicators{
+    @media (max-width: 991.98px){display: none;}
+}
+
+.h1Contacto{
+    text-align: center;
+}
+
+.accordionPreguntas{
+    background-color: map-get($map: $paleta, $key:"dos" );
+}
+
+.colorcitoCC{
+    @include h3Accordion (#000,bold,1.250em);
+}
+
+.formularioContacto{
+    background-color: map-get($map: $paleta, $key:"tres" );
+    width: 300px;
+    height: auto;
+    border: solid #F9F5F5 4px;
+    padding-top: 0%;
+    padding-left: 5px;
+    margin: 30px 0px;
+}
+
+.textDecoration{
+    text-decoration: none;
+}
+
+#Contactate{
+    font-size: map-get($map: $fontsize, $key:"20px" );
+    margin: 5px auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.iconosContacto{
+    list-style: none;
+    padding-left: 0%;
+    margin-left: 0%;
+    width: 30px;
+}
+
+.iconosContactoSelf{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.h3Contacto{
+    font-size: map-get($map: $fontsize, $key:"18px" );
+}
+
+.iconoTelefono{
+    width: 40px;
+}
+
+.colorAccordionContacto{
+    background: rgb(216,176,140);
+    background: linear-gradient(90deg, rgba(216,176,140,1) 37%, rgba(242,204,181,1) 82%);
+}
+
+
+.displaySectionContacto{
+    margin-top: 0%;
+    margin-left: 60px;
+    @media (max-width: 767.98px){margin: 0px auto;}
+}
+
+.qrImage{
+    width: 300px;
+    height: auto;
+}
+
+.displayContacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.heightImgCarousel{
+    height: 500px;
+    object-fit: cover;
+}
+
+.heightTextArea{
+    height: 150px;
+}
+
+//empieza grid
+.container{
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    grid-template-areas:
+    "formC socialC"
+}
+
+.formC{
+    grid-area: formC;
+}
+
+.socialMediasC{
+    grid-area: socialC;
+}
+
+@media (max-width: 1024px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        display: flex;
+        flex-direction: column;
+        grid-template-areas:
+        "formC"
+        "socialC";
+    }
+
+    main section{
+        display: flex;
+        align-self: center;
+    }
+}
+
+.iFrameC{
+    grid-area: iframeC;
+}
+
+.qrC{
+    grid-area: qrC;
+}
+
+@media (max-width: 1024px){
+    .sectionContacto{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        display: flex;
+        flex-direction: column;
+        grid-template-areas:
+        "iframeC"
+        "qrC";
+        align-items: center;
+    }
+
+    .qrImage{
+        margin-top: 30px;
+    }
+}
+
+//animacion h1
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-emphasis-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: flex;
+      font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}

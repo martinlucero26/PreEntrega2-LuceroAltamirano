@@ -1,0 +1,22 @@
+@import "_commons";
+
+.colorCardVencimientos{
+    background-color: map-get($map: $paleta, $key:"dos" );
+}
+
+.marginImgVencimientos{
+    margin-top: 5px;
+}
+
+.card-vencimientos{
+    text-align: center;
+    font-size: 40px;
+}
+
+.card-text-vencimientos{
+    font-size: map-get($map: $fontsize, $key:"16px" );
+    color: map-get($map: $paleta, $key: "once");
+    &:hover{
+        color: map-get($map: $paleta, $key:"diez" );
+    }
+}

@@ -1,0 +1,56 @@
+@import "_commons";
+
+.h1Servicios{
+    @include displaycenter (flex,center,center);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: map-get($map: $fontsize, $key:"40px" );
+    font-family: $font1;
+    font-weight: bold;
+    @media (min-width: 200px){text-align: center;}
+}
+
+.h2Servicios{
+    @extend .h1Servicios;
+    font-weight: 400;
+    font-size: map-get($map: $fontsize, $key:"25px" );
+    @media (max-width: 767.98px){
+        display: none;
+    }
+}
+
+
+.tableTitles{
+    @include displaycenter (flex,center,center);
+    font-family: $font2;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.contenedor{
+    @include displaycenter (flex,center,center);
+}
+
+.h3AccordionServicios{
+    @include h3Accordion(#000,bold,1.250em);
+}
+
+
+
+.buttonAccordionServicios{
+    background: rgb(216,176,140);
+    background: linear-gradient(90deg, rgba(216,176,140,1) 37%, rgba(242,204,181,1) 82%);
+    border: 0px;
+}
+
+.accordion{
+    background-color: map-get($map: $paleta, $key:"uno" );
+}
+
+.accordion-item{
+    background-color: map-get($map: $paleta, $key:"dos" );
+}
+
+.accordion-body{
+    background-color: map-get($map: $paleta, $key:"dos" );
+}
